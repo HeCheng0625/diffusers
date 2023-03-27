@@ -146,7 +146,7 @@ class ControlNetModel(ModelMixin, ConfigMixin):
         )
 
         # time
-        time_embed_dim = block_out_channels[0] * 4
+        time_embed_dim = block_out_channels[0] * 4   # 320 * 4
 
         self.time_proj = Timesteps(block_out_channels[0], flip_sin_to_cos, freq_shift)
         timestep_input_dim = block_out_channels[0]
